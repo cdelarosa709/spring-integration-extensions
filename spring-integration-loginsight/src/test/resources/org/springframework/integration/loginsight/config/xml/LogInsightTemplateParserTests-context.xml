@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:int-loginsight="http://www.springframework.org/schema/integration/loginsight"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/loginsight http://www.springframework.org/schema/integration/loginsight/spring-integration-loginsight.xsd">
+
+	<int-loginsight:server id="loginsightServer"
+		username="admin" password="Vmware!23" host="10.152.215.3" />
+		
+	<int-loginsight:template id="logInsightTemplate"
+		server="loginsightServer" />
+	
+	<!-- <bean id="logInsightTemplateMock" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.springframework.integration.loginsight.core.LogInsightTemplate" />
+	</bean> -->
+	
+</beans>

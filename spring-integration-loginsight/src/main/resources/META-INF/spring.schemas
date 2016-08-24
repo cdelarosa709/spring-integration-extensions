@@ -1,0 +1,2 @@
+http\://www.springframework.org/schema/integration/loginsight/spring-integration-loginsight-1.0.xsd=org/springframework/integration/loginsight/config/xml/spring-integration-loginsight-1.0.xsd
+http\://www.springframework.org/schema/integration/loginsight/spring-integration-loginsight.xsd=org/springframework/integration/loginsight/config/xml/spring-integration-loginsight-1.0.xsd

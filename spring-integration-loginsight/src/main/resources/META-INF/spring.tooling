@@ -1,0 +1,4 @@
+# Tooling related information for the integration LogInsight namespace
+http\://www.springframework.org/schema/integration/loginsight@name=integration LogInsight Namespace
+http\://www.springframework.org/schema/integration/loginsight@prefix=int-loginsight
+http\://www.springframework.org/schema/integration/loginsight@icon=org/springframework/integration/loginsight/config/xml/spring-integration-loginsight.gif
