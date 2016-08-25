@@ -8,7 +8,7 @@
 ## Inbound Channel Adapter
 
 The Inbound channel adapter is used to read data from LogInsight and output a message containing the data to a Spring Integration channel. Inbound adapters can be used to perform 
-* Blocking Event Search
+### Blocking Event Search
 
 ```xml
 <int-loginsight:inbound-channel-adapter id="logInsightInboundChannelAdapter"
@@ -18,7 +18,7 @@ The Inbound channel adapter is used to read data from LogInsight and output a me
 </int-loginsight:inbound-channel-adapter>
 ```
 
-* Non Blocking Event search
+### Non Blocking Event search
 
 ```xml
 <int-loginsight:inbound-channel-adapter id="logInsightInboundChannelAdapter"
@@ -29,7 +29,7 @@ The Inbound channel adapter is used to read data from LogInsight and output a me
 </int-loginsight:inbound-channel-adapter>
 ```
 
-* Blocking Aggregate Event or Even Group Search
+### Blocking Aggregate Event or Even Group Search
 
 ```xml
 <int-loginsight:inbound-channel-adapter id="logInsightInboundChannelAdapter"
@@ -39,24 +39,13 @@ The Inbound channel adapter is used to read data from LogInsight and output a me
 </int-loginsight:inbound-channel-adapter>
 ```
 
-* Non blocking aggregate event search
+### Non blocking aggregate event search
 
 ```xml
 <int-loginsight:inbound-channel-adapter id="logInsightInboundChannelAdapter"
         search="query-url-segment"
         template="loginsightTemplate"
         channel="inputFromLoginsight"
-</int-loginsight:inbound-channel-adapter>
-```
-
-* Continuous search
-
-```xml
-<int-loginsight:inbound-channel-adapter id="logInsightInboundChannelAdapter"
-        search="query-url-segment"
-        template="loginsightTemplate"
-        channel="inputFromLoginsight" mode="BLOCKING" earliestTime="-1d" latestTime="now" initEarliestTime="-1d">
-        <int:poller fixed-rate="5" time-unit="SECONDS"/>
 </int-loginsight:inbound-channel-adapter>
 ```
 
@@ -65,13 +54,13 @@ The Inbound channel adapter is used to read data from LogInsight and output a me
 
 The Outbound channel adapter is used to ingest events into LogInsight and returns a response to the ingestion. Outbound channel adapters can be used to perform
 
-* Blocking ingestion
+### Blocking ingestion
 
 ```xml
 <int-loginsight:outbound-channel-adapter id="logInsightOutboundChannelAdapter" channel="outputToLogInsight" template="loginsightTemplate"/>
 ```
 
-* Non blocking ingestion
+### Non blocking ingestion
 
 ```xml
 <int-loginsight:outbound-channel-adapter id="logInsightOutboundChannelAdapter" channel="outputToLogInsight" template="loginsightTemplate" handler="messageHandlerBean"/>
